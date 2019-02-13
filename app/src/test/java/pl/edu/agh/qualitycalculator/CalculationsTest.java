@@ -35,8 +35,8 @@ public class CalculationsTest {
     }
 
     @Test
-    public void testSumVerbalize () throws Exception {
-
+    public void testNoData () throws Exception {
+        assertEquals(15, calculationsUnderTest.calculate(Operation.MULTIPLY, 3, 5), 0.01);
     }
 
     @After
