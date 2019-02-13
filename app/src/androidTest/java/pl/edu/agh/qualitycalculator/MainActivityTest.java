@@ -23,6 +23,14 @@ public class MainActivityTest {
             MainActivity.class);
 
     @Test
+    public void testAvg(){
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("8"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("2"));
+        onView(withId(R.id.etNum3)).perform(click()).perform(typeText("2"));
+        onView(withId(R.id.tvResult)).check(matches(withText("Average equals 4.0")));
+    }
+
+    @Test
     public void testSum(){
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("4"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText("4"));
@@ -68,12 +76,6 @@ public class MainActivityTest {
         onView(withId(R.id.btnDiv)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("Error")));
     }
-    @Test
-    public void testAvg(){
-        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("5"));
-        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("10"));
-        onView(withId(R.id.etNum3)).perform(click()).perform(typeText("15"));
-        onView(withId(R.id.tvResult)).check(matches(withText("Average equals 10.0")));
-    }
+
 }
 
