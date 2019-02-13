@@ -48,7 +48,7 @@ public class CalculationsTest {
     @Test
     public void testSumVerbalize () throws Exception {
         float result = calculationsUnderTest.calculate(Operation.SUM, 1, 1, 0);
-        String verbalization = calculationsVUnderTest.verbalize(Operation.SUM, 1, 1, 0, result);
+        String verbalization = calculationsVUnderTest.verbalize(Operation.SUM, 1, 1, result);
 
         assertEquals("1.0 plus 1.0 gives value 2.0", verbalization);
     }
