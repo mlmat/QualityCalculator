@@ -27,6 +27,7 @@ public class MainActivityTest {
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("8"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText("2"));
         onView(withId(R.id.etNum3)).perform(click()).perform(typeText("2"));
+        onView(withId(R.id.avgBttn)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("Average equals 4.0")));
     }
 
