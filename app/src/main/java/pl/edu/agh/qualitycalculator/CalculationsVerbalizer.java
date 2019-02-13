@@ -4,14 +4,13 @@ import android.text.TextUtils;
 
 public class CalculationsVerbalizer {
 
-    public String verbalize(Operation operation, float operand1, float operand2, float operand3, float result) {
+    public String verbalize(Operation operation, float operand1, float operand2, float result) {
         if((operand2==0)&&(operation.equals(Operation.DIVIDE))){
             return "Error";
         }
 
         if(operation.equals(Operation.AVERAGE)){
-            return operation.toString() + " " + String.valueOf(operand1) + ", " +
-            String.valueOf(operand2) + ", " + String.valueOf(operand3) + " equals " + String.valueOf(result);
+            return operation.toString() + String.valueOf(result);
         }
 
         if(operation.equals(Operation.AVERAGE)){
