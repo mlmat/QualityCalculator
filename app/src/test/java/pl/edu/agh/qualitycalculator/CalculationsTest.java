@@ -26,12 +26,12 @@ public class CalculationsTest {
 
     @Test
     public void testDivide() throws Exception {
-        assertEquals(2, calculationsUnderTest.calculate(Operation.DIVIDE, 6, 2), 0.01);
+        assertEquals(3, calculationsUnderTest.calculate(Operation.DIVIDE, 6, 2), 0.01);
     }
 
     @Test
     public void testMultiply () throws Exception {
-        assertEquals(3, calculationsUnderTest.calculate(Operation.MULTIPLY, 3, 5), 0.01);
+        assertEquals(15, calculationsUnderTest.calculate(Operation.MULTIPLY, 3, 5), 0.01);
     }
 
     @Test
