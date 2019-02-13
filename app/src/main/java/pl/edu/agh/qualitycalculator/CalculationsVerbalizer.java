@@ -13,10 +13,6 @@ public class CalculationsVerbalizer {
             return operation.toString() + String.valueOf(result);
         }
 
-        if(operation.equals(Operation.AVERAGE)){
-
-        }
-
         String verbalizedOperation = String.valueOf(operand1);
         verbalizedOperation += " " + operation.toString() + " ";
         verbalizedOperation += String.valueOf(operand2);

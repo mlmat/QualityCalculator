@@ -37,10 +37,6 @@ public class CalculationsTest {
     }
 
     @Test
-    public void testNoData () throws Exception {
-        assertEquals(15, calculationsUnderTest.calculate(Operation.MULTIPLY, 3, 5, 0), 0.01);
-    }
-    @Test
     public void testAvg () throws Exception {
         assertEquals(10, calculationsUnderTest.calculate(Operation.AVERAGE, 5, 10, 15), 0.01);
     }
@@ -52,6 +48,7 @@ public class CalculationsTest {
 
         assertEquals("1.0 plus 1.0 gives value 2.0", verbalization);
     }
+
 
 
     @After

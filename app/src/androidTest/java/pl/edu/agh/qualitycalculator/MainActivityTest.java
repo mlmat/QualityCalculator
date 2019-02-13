@@ -22,6 +22,8 @@ public class MainActivityTest {
     public ActivityTestRule mActivityRule = new ActivityTestRule<>(
             MainActivity.class);
 
+
+
     @Test
     public void testAvg(){
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("8"));
@@ -67,6 +69,14 @@ public class MainActivityTest {
     public void testNoOperand(){
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("12"));
         onView(withId(R.id.btnAdd)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("No operand value")));
+    }
+
+    @Test
+    public void testNoOperandAvg(){
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("12"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("12"));
+        onView(withId(R.id.avgBttn)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("No operand value")));
     }
 
